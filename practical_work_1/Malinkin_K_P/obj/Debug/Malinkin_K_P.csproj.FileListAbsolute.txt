@@ -1,0 +1,15 @@
+F:\projects\prac_1\Malinkin_K_P\bin\Debug\Malinkin_K_P.exe.config
+F:\projects\prac_1\Malinkin_K_P\bin\Debug\Malinkin_K_P.exe
+F:\projects\prac_1\Malinkin_K_P\bin\Debug\Malinkin_K_P.pdb
+F:\projects\prac_1\Malinkin_K_P\obj\Debug\Malinkin_K_P.csproj.AssemblyReference.cache
+F:\projects\prac_1\Malinkin_K_P\obj\Debug\MainWindow.g.cs
+F:\projects\prac_1\Malinkin_K_P\obj\Debug\App.g.cs
+F:\projects\prac_1\Malinkin_K_P\obj\Debug\Malinkin_K_P_MarkupCompile.cache
+F:\projects\prac_1\Malinkin_K_P\obj\Debug\Malinkin_K_P_MarkupCompile.lref
+F:\projects\prac_1\Malinkin_K_P\obj\Debug\MainWindow.baml
+F:\projects\prac_1\Malinkin_K_P\obj\Debug\Malinkin_K_P.g.resources
+F:\projects\prac_1\Malinkin_K_P\obj\Debug\Malinkin_K_P.Properties.Resources.resources
+F:\projects\prac_1\Malinkin_K_P\obj\Debug\Malinkin_K_P.csproj.GenerateResource.cache
+F:\projects\prac_1\Malinkin_K_P\obj\Debug\Malinkin_K_P.csproj.CoreCompileInputs.cache
+F:\projects\prac_1\Malinkin_K_P\obj\Debug\Malinkin_K_P.exe
+F:\projects\prac_1\Malinkin_K_P\obj\Debug\Malinkin_K_P.pdb

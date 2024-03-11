@@ -1,0 +1,16 @@
+﻿<Window x:Class="Malinkin_K_P.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Malinkin_K_P"
+        mc:Ignorable="d"
+        Title="MVVM Example" Height="350" Width="525">
+    <Grid>
+        <StackPanel>
+            <TextBox Text="{Binding Person.FirstName, Mode=TwoWay}" Margin="5"/>
+            <TextBox Text="{Binding Person.LastName, Mode=TwoWay}" Margin="5"/>
+            <TextBox Text="{Binding Person.Age, Mode=TwoWay}" Margin="5"/>
+        </StackPanel>
+    </Grid>
+</Window>
