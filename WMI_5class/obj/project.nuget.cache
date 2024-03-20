@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "mlL7M114dgRv9vIS5VLcK24837SHOp8k3Qp0COKbe4aRF5TV65BcCI7DXxLmYo9DUl8m59MpJ3mlp8JCSCTI1Q==",
+  "success": true,
+  "projectFilePath": "F:\\projects\\editLobanov\\WMI_5class\\WMI_5class.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kekha\\.nuget\\packages\\system.codedom\\8.0.0\\system.codedom.8.0.0.nupkg.sha512",
+    "C:\\Users\\kekha\\.nuget\\packages\\system.management\\8.0.0\\system.management.8.0.0.nupkg.sha512",
+    "C:\\Users\\kekha\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.3\\microsoft.windowsdesktop.app.ref.8.0.3.nupkg.sha512",
+    "C:\\Users\\kekha\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.3\\microsoft.aspnetcore.app.ref.8.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
