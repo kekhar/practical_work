@@ -1,0 +1,24 @@
+﻿<Window x:Class="Products.DeleteProductWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Products"
+        mc:Ignorable="d"
+        Title="Delete Product Window" MinHeight="450" MaxHeight="450"
+        WindowStartupLocation="CenterScreen" Width="800">
+    <Grid>
+        <ListView x:Name="ProductsListView" ItemsSource="{Binding Products}" SelectionMode="Single">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ID" DisplayMemberBinding="{Binding ProductID}" Width="50"/>
+                    <GridViewColumn Header="Название продукта" DisplayMemberBinding="{Binding ProductName}" Width="200"/>
+                    <GridViewColumn Header="Категория" DisplayMemberBinding="{Binding Category}" Width="100"/>
+                    <GridViewColumn Header="Цена" DisplayMemberBinding="{Binding Price}" Width="80"/>
+                    <GridViewColumn Header="Дата доставки продукта" DisplayMemberBinding="{Binding ArrivalDate}" Width="150"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="Удалить продукт" Click="DeleteButton_Click" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,372,0,0" Width="104"/>
+    </Grid>
+</Window>

@@ -1,11 +1,7 @@
-﻿using System;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 using Products.Contexts;
 using Products.Models;
 
@@ -13,33 +9,54 @@ namespace Products.ViewModels
 {
     public class MainViewModel : INotifyPropertyChanged
     {
-        public event PropertyChangedEventHandler? PropertyChanged;
+        public event PropertyChangedEventHandler PropertyChanged;
 
-        private void OnPropertyChanged([CallerMemberName] string name = "")
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        private ObservableCollection<Product> _products;
+        public ObservableCollection<Product> Products
+        {
+            get { return _products; }
+            set { _products = value; OnPropertyChanged(); }
         }
 
         public MainViewModel()
         {
+            LoadProducts();
+        }
+
+        public void LoadProducts()
+        {
             using (var context = new ProductContext())
             {
-                Products = context.Products.ToList();
+                Products = new ObservableCollection<Product>(context.Products.ToList());
             }
         }
 
-
-        private IEnumerable<Product> _Products;
-        public IEnumerable<Product> Products
+        public void AddProduct(Product newProduct)
         {
-            get
+            using (var context = new ProductContext())
             {
-                return _Products;
+                context.Products.Add(newProduct);
+                context.SaveChanges();
+                Products.Add(newProduct);
             }
-            set
+        }
+
+        public void DeleteProduct(Product product)
+        {
+            using (var context = new ProductContext())
             {
-                _Products = value;
-                OnPropertyChanged();
+                var productToDelete = context.Products.FirstOrDefault(p => p.ProductID == product.ProductID);
+                if (productToDelete != null)
+                {
+                    context.Products.Remove(productToDelete);
+                    context.SaveChanges();
+                    Products.Remove(product);
+                }
             }
         }
     }

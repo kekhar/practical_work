@@ -17,6 +17,7 @@ namespace Products.Contexts
         }
 
         public DbSet<Product> Products { get; set; }
+        public DbSet<Shopper> Shoppers { get; set; }
     }
 }
     

@@ -12,14 +12,17 @@
     </Window.DataContext>
 
     <Grid>
-        <ListView ItemsSource="{Binding Products}">
+        <Button Content="Добавить продукт" Click="AddProduct_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="21,10,0,0"/>
+        <Button Content="Перейти в список покупателей" Click="OpenShopperWindow_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="600,10,10,0"/>
+        <Button Content="Удалить продукт" Click="DeleteProduct_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="150,10,0,0"/>
+        <ListView ItemsSource="{Binding Products}" Margin="0,48,0,0" MaxHeight="{Binding ActualHeight, ElementName=Grid}">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="ID" DisplayMemberBinding="{Binding ProductID}" Width="40"/>
                     <GridViewColumn Header="Название продукта" DisplayMemberBinding="{Binding ProductName}" Width="230"/>
                     <GridViewColumn Header="Категория" DisplayMemberBinding="{Binding Category}" Width="100"/>
                     <GridViewColumn Header="Цена" DisplayMemberBinding="{Binding Price}" Width="80"/>
-                    <GridViewColumn Header="Дата доставки продукта" DisplayMemberBinding="{Binding ArrivalDate}"  Width="160"/>
+                    <GridViewColumn Header="Дата доставки продукта" DisplayMemberBinding="{Binding ArrivalDate}"  Width="145"/>
                 </GridView>
             </ListView.View>
         </ListView>
