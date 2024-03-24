@@ -1,0 +1,14 @@
+F:\projects\editL\systemIO_pract\bin\Debug\net8.0\systemIO_pract.exe
+F:\projects\editL\systemIO_pract\bin\Debug\net8.0\systemIO_pract.deps.json
+F:\projects\editL\systemIO_pract\bin\Debug\net8.0\systemIO_pract.runtimeconfig.json
+F:\projects\editL\systemIO_pract\bin\Debug\net8.0\systemIO_pract.dll
+F:\projects\editL\systemIO_pract\bin\Debug\net8.0\systemIO_pract.pdb
+F:\projects\editL\systemIO_pract\obj\Debug\net8.0\systemIO_pract.GeneratedMSBuildEditorConfig.editorconfig
+F:\projects\editL\systemIO_pract\obj\Debug\net8.0\systemIO_pract.AssemblyInfoInputs.cache
+F:\projects\editL\systemIO_pract\obj\Debug\net8.0\systemIO_pract.AssemblyInfo.cs
+F:\projects\editL\systemIO_pract\obj\Debug\net8.0\systemIO_pract.csproj.CoreCompileInputs.cache
+F:\projects\editL\systemIO_pract\obj\Debug\net8.0\systemIO_pract.dll
+F:\projects\editL\systemIO_pract\obj\Debug\net8.0\refint\systemIO_pract.dll
+F:\projects\editL\systemIO_pract\obj\Debug\net8.0\systemIO_pract.pdb
+F:\projects\editL\systemIO_pract\obj\Debug\net8.0\systemIO_pract.genruntimeconfig.cache
+F:\projects\editL\systemIO_pract\obj\Debug\net8.0\ref\systemIO_pract.dll
