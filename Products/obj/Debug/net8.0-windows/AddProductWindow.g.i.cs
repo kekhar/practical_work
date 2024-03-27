@@ -92,7 +92,7 @@ namespace Products {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Products;component/addproductwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Products;V1.0.0.0;component/addproductwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\AddProductWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

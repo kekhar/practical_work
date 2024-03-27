@@ -1,0 +1,16 @@
+﻿<Window x:Class="BookInventory.Xaml.AddBookLocationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Добавление нового местоположения книги" Height="220" Width="800">
+    <Grid>
+        <StackPanel Margin="10">
+            <TextBlock Text="ID Книги:"/>
+            <TextBox Text="{Binding BookID}"/>
+            <TextBlock Text="ID Местоположения:"/>
+            <TextBox Text="{Binding LocationID}"/>
+            <TextBlock Text="Количество:"/>
+            <TextBox Text="{Binding Quantity}"/>
+            <Button Content="Создать" Margin="0,10,0,0" Command="{Binding SaveCommand}"/>
+        </StackPanel>
+    </Grid>
+</Window>

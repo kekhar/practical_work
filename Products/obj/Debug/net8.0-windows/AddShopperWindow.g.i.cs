@@ -85,7 +85,7 @@ namespace Products {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Products;component/addshopperwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Products;V1.0.0.0;component/addshopperwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\AddShopperWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

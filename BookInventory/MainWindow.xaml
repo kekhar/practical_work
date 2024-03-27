@@ -1,0 +1,115 @@
+﻿<Window x:Class="BookInventory.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:BookInventory.ViewModels"
+        Title="Книжный склад" Height="550" Width="800">
+    <Window.DataContext>
+        <vm:MainViewModel/>
+    </Window.DataContext>
+
+    <Grid>
+        <TabControl>
+            <TabItem Header="Авторы">
+                <StackPanel>
+                    <!-- Отображение данных об авторах -->
+                    <ListView ItemsSource="{Binding AuthorVM.Authors}" SelectedItem="{Binding AuthorVM.SelectedAuthor}" Height="300">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="ID" DisplayMemberBinding="{Binding author_id}" Width="50"/>
+                                <GridViewColumn Header="Имя автора" DisplayMemberBinding="{Binding name}" Width="707"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <Label Content="Введите нового автора" Width="138"/>
+                    <TextBox Text="{Binding AuthorVM.NewAuthorName, UpdateSourceTrigger=PropertyChanged}" Width="400" Margin="0,0,0,0"/>
+                    <Button Content="Добавить автора" Margin="0,10,0,10" Command="{Binding AuthorVM.AddAuthorCommand}"/>
+                    <Button Content="Обновить данные" Margin="0, 0,0,10" Command="{Binding AuthorVM.UpdateAuthorCommand}"/>
+                    <Button Content="Редактировать" Command="{Binding AuthorVM.EditAuthorCommand}" Margin="0, 0,0,10"/>
+                    <Button Content="Удалить автора" Command="{Binding AuthorVM.DeleteAuthorCommand}"/>
+                </StackPanel>
+            </TabItem>
+
+            <TabItem Header="Жанры">
+                <StackPanel>
+                    <!-- Отображение данных о жанрах -->
+                    <ListView ItemsSource="{Binding GenreVM.Genres}" SelectedItem="{Binding GenreVM.SelectedGenre}" Height="300">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="ID" DisplayMemberBinding="{Binding genre_id}" Width="50"/>
+                                <GridViewColumn Header="Название жанра" DisplayMemberBinding="{Binding name}" Width="707"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <Label Content="Введите новый жанр" Width="138"/>
+                    <TextBox Text="{Binding GenreVM.NewGenreName, UpdateSourceTrigger=PropertyChanged}" Width="400" Margin="0,0,0,0"/>
+                    <Button Content="Добавить жанр" Margin="0,10,0,10" Command="{Binding GenreVM.AddGenreCommand}"/>
+                    <Button Content="Обновить список" Margin="0,0,0,10" Command="{Binding GenreVM.LoadGenresCommand}"/>
+                    <Button Content="Редактировать" Command="{Binding GenreVM.EditGenreCommand}" Margin="0,0,0,10"/>
+                    <Button Content="Удалить жанр" Command="{Binding GenreVM.DeleteGenreCommand}"/>
+                </StackPanel>
+            </TabItem>
+
+            <TabItem Header="Местоположение">
+                <StackPanel>
+                    <!-- Отображение списка местоположений -->
+                    <ListView ItemsSource="{Binding LocationVM.Locations}" SelectedItem="{Binding LocationVM.SelectedLocation}" Height="300">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="ID" DisplayMemberBinding="{Binding location_id}" Width="50"/>
+                                <GridViewColumn Header="Название местоположения" DisplayMemberBinding="{Binding name}" Width="707"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+
+                    <Label Content="Введите новое местоположение" Width="200"/>
+                    <TextBox Text="{Binding LocationVM.NewLocationName, UpdateSourceTrigger=PropertyChanged}" Width="400" Margin="0,0,0,10"/>
+                    <Button Content="Добавить местоположение" Command="{Binding LocationVM.AddLocationCommand}" Margin="0,10,0,10"/>
+                    <Button Content="Обновить список" Command="{Binding LocationVM.LoadLocationsCommand}" Margin="0,0,0,10"/>
+                    <Button Content="Редактировать" Command="{Binding LocationVM.EditLocationCommand}" Margin="0,0,0,10"/>
+                    <Button Content="Удалить местоположение" Command="{Binding LocationVM.DeleteLocationCommand}"/>
+                </StackPanel>
+            </TabItem>
+
+            <TabItem Header="Книги">
+                <StackPanel>
+                    <!-- Отображение данных о книгах -->
+                    <ListView ItemsSource="{Binding BookVM.Books}" SelectedItem="{Binding BookVM.SelectedBook}" Height="300">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="ID" DisplayMemberBinding="{Binding book_id}" Width="50"/>
+                                <GridViewColumn Header="Название книги" DisplayMemberBinding="{Binding title}" Width="200"/>
+                                <GridViewColumn Header="ID автора" DisplayMemberBinding="{Binding author_id}" Width="100"/>
+                                <GridViewColumn Header="ID жанра" DisplayMemberBinding="{Binding genre_id}" Width="100"/>
+                                <GridViewColumn Header="Количество" DisplayMemberBinding="{Binding quantity}" Width="100"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <Button Content="Добавить книгу" Command="{Binding BookVM.OpenAddBookWindowCommand}" Margin="0,20,0,20"/>
+                    <Button Content="Обновить список книг" Command="{Binding BookVM.LoadBooksCommand}" Margin="0,0,0,20"/>
+                    <Button Content="Редактировать книгу" Command="{Binding BookVM.EditBookCommand}" Margin="0,0,0,20"/>
+                    <Button Content="Удалить книгу" Command="{Binding BookVM.DeleteBookCommand}"/>
+                </StackPanel>
+            </TabItem>
+
+            <TabItem Header="Местоположениях книг">
+                <StackPanel>
+                    <!-- Отображение данных о местоположениях книг -->
+                    <ListView ItemsSource="{Binding BookLocationVM.BookLocations}" SelectedItem="{Binding BookLocationVM.SelectedBookLocation}" Height="300">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="ID" DisplayMemberBinding="{Binding book_location_id}" Width="50"/>
+                                <GridViewColumn Header="ID книги" DisplayMemberBinding="{Binding book_id}" Width="100"/>
+                                <GridViewColumn Header="ID местоположения" DisplayMemberBinding="{Binding location_id}" Width="150"/>
+                                <GridViewColumn Header="Количество" DisplayMemberBinding="{Binding quantity}" Width="100"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <Button Content="Добавить местоположение книги" Command="{Binding BookLocationVM.OpenAddBookLocationWindowCommand}" Margin="0,20,0,20"/>
+                    <Button Content="Обновить список местоположений книг" Command="{Binding BookLocationVM.LoadBookLocationsCommand}" Margin="0,0,0,20"/>
+                    <Button Content="Редактировать местоположение книги" Command="{Binding BookLocationVM.EditBookLocationCommand}" Margin="0,0,0,20"/>
+                    <Button Content="Удалить местоположение книги" Command="{Binding BookLocationVM.DeleteBookLocationCommand}"/>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
